@@ -10,7 +10,7 @@ app.use(cors());
 
 
 
-mongoose.connect(process.env.MONGO_KEY,{
+mongoose.connect(process.env.VITE_MONGO_KEY,{
     dbName:'UserDetails'
 });
 
