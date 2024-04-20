@@ -5,7 +5,7 @@ import '../style.css'
 import LoadingPage from './LoadingPage'
 
 function GetCustomerDetails() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState(null)
     const [search, setSearch] = useState("")
 
     useEffect(() => {
@@ -25,10 +25,8 @@ function GetCustomerDetails() {
             //     )
             .catch(err => console.log(err))
     }
-    if (data==true) {
-        return (
-            <LoadingPage />
-        )
+    if (data===null) {
+        <LoadingPage />
     }
     else {
 
