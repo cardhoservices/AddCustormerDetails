@@ -26,7 +26,7 @@ function AddCustomerDetails() {
                 {errors.Name ? <p className='error'>{errors.Name.message}</p> : null}
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" name="Email" {...register("Email", { required: { value: true, message: "Email is required" } })} />
-                {errors.Email ? <p className='error'>{errors.Email.message}</p> : null}
+                {/* {errors.Email ? <p className='error'>{errors.Email.message}</p> : null} */}
                 <label htmlFor="phone">Phone</label>
                 <input type="text" id="phone" name="Phone" {...register("Phone", {
                     required: "Phone number is required",

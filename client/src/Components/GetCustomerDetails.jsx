@@ -14,13 +14,14 @@ function GetCustomerDetails() {
                 setData(res.data)
             })
             .catch(err => console.log(err))
-    }, [])
+    }, [data])
 
     const deleteData = async (id) => {
         await alert("Are you sure?")
         axios.delete(`${import.meta.env.VITE_SERVER_URL}/delete/${id}`)
-            .then(() =>
-                window.location.reload())
+            // .then(() =>
+            //     window.location.reload()
+            //     )
             .catch(err => console.log(err))
     }
 
