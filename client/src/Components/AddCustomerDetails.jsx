@@ -11,7 +11,7 @@ function AddCustomerDetails() {
         console.log(data)
         axios.post(`${import.meta.env.VITE_SERVER_URL}/post`, data)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 navigate("/CustomerDetails")
             })
             .catch(err => console.log(err))
