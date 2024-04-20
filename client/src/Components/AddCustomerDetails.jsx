@@ -8,7 +8,7 @@ function AddCustomerDetails() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         axios.post(`${import.meta.env.VITE_SERVER_URL}/post`, data)
             .then(res => {
                 // console.log(res.data)
