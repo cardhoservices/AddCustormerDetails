@@ -52,10 +52,13 @@ const deleteData = async (req, res) => {
         console.log(error);
     }
 }
+
+
+
 module.exports = {
     subscription,
     getData,
     deleteData,
     getdatabyid,
-    updateData
+    updateData,
 }

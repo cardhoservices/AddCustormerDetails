@@ -2,12 +2,15 @@ const mongoose = require('mongoose');
 
 const SubscriptionSchema = new mongoose.Schema({
     Name: String,
-    Email: String,
     Phone: Number,
     Address: String,
-    Car: String,
     Package: String,
-    StartDate: Date
+    StartDate: Date,
+    interriorfirst:Date,
+    interriorsecond:Date,
+    interriorthird:Date,
+    interriorfourth:Date,
+
 })
 
 const Subscription = mongoose.model('details', SubscriptionSchema);

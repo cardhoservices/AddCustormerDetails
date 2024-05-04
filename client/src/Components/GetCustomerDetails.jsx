@@ -48,12 +48,14 @@ function GetCustomerDetails() {
                             <div key={item._id}>
                                 <div className='card'>
                                     <p>Name: {item.Name}</p>
-                                    <p>Email: {item.Email}</p>
                                     <p>Phone: {item.Phone}</p>
                                     <p>Address: {item.Address}</p>
-                                    <p>Car: {item.Car}</p>
                                     <p>Package: {item.Package}</p>
                                     <p>Start Date: {item.StartDate ? item.StartDate.split("T")[0] : "N/A"}</p>
+                                    <p>First interrier date: {item.interriorfirst ? item.interriorfirst.split("T")[0] : "N/A"}</p>
+                                    <p>Second interrior date: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
+                                    <p>Third interrior date: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
+                                    <p>Fourth interrior date: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
                                     <div>
                                         <button type="button" onClick={() => deleteData(item._id)}>Delete</button>
                                         <Link to={`/UpdateCustomerDetails/${item._id}`}><button type="button">Update</button></Link>

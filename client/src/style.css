@@ -146,3 +146,8 @@ input[type="text"][disabled]{
 .loading video:hover::-webkit-media-controls {
   display: none;
 }
+
+.interrior{
+  display: flex;
+  flex-direction: row;
+}
