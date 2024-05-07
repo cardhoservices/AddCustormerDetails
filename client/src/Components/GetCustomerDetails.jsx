@@ -15,7 +15,7 @@ function GetCustomerDetails() {
                 setData(res.data)
             })
             .catch(err => console.log(err))
-    }, [data])
+    }, [])
 
     const deleteData = async (id) => {
         await alert("Are you sure?")

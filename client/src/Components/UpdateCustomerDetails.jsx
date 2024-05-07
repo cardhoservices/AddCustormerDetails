@@ -8,10 +8,10 @@ function UpdateCustomerDetails() {
     const [Phone, setPhone] = useState("")
     const [Address, setAddress] = useState("")
     const [Package, setPackage] = useState("")
-    const [interrierfirst, setinterrierfirst] = useState("")
-    const [interriersecond, setinterriersecond] = useState("")
-    const [interrierthird, setinterrierthird] = useState("")
-    const [interrierfourth, setinterrierfourth] = useState("")
+    const [interriorfirst, setinterrierfirst] = useState("")
+    const [interriorsecond, setinterriersecond] = useState("")
+    const [interriorthird, setinterrierthird] = useState("")
+    const [interriorfourth, setinterrierfourth] = useState("")
     const [StartDate, setDate] = useState([])
     const navigate = useNavigate()
     const id = useParams().id
@@ -23,20 +23,20 @@ function UpdateCustomerDetails() {
                 setPhone(res.data.Phone)
                 setAddress(res.data.Address)
                 setPackage(res.data.Package)
-                setinterrierfirst(res.data.interrierfirst)
-                setinterriersecond(res.data.interriersecond)
-                setinterrierthird(res.data.interrierthird)
-                setinterrierfourth(res.data.interrierfourth)
+                setinterrierfirst(res.data.interriorfirst.split("T")[0])
+                setinterriersecond(res.data.interriorsecond.split("T")[0])
+                setinterrierthird(res.data.interriorthird.split("T")[0])
+                setinterrierfourth(res.data.interriorfourth.split("T")[0])
                 setDate(res.data.StartDate.split("T")[0])
+                // console.log(res.data)
             })
             .catch(err => console.log(err))
     }, [])
 
     const onSubmit = (data) => {
-        // console.log(data)
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Package, StartDate,interrierfirst,interriersecond,interrierthird,interrierfourth })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Package, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
             .then(res => {
-                // console.log(res.data)
+                console.log(res.data)
                 navigate("/CustomerDetails")
             })
             .catch(err => console.log(err))
@@ -63,20 +63,20 @@ function UpdateCustomerDetails() {
                 <input type="date" id="Date" name="Date" defaultValue={StartDate} onChange={(e) => setDate(e.target.value)} />
                 <div>
                     <div>
-                        <label>Interrie First</label>
-                        <input type="date" id="Date" name="Date" defaultValue={interrierfirst} onChange={(e) => setinterrierfirst(e.target.value)} />
+                        <label>Interrier First</label>
+                        <input type="date" id="Date" name="interrierfirst" defaultValue={interriorfirst} onChange={(e) => setinterrierfirst(e.target.value)} />
                     </div>
                     <div>
-                        <label>Interrie Second</label>
-                        <input type="date" id="Date" name="Date" defaultValue={interriersecond} onChange={(e) => setinterriersecond(e.target.value)} />
+                        <label>Interrier Second</label>
+                        <input type="date" id="Date" name="interriersecond" defaultValue={interriorsecond} onChange={(e) => setinterriersecond(e.target.value)} />
                     </div>
                     <div>
-                        <label>Interrie Third</label>
-                        <input type="date" id="Date" name="Date" defaultValue={interrierthird} onChange={(e) => setinterrierthird(e.target.value)} />
+                        <label>Interrier Third</label>
+                        <input type="date" id="Date" name="interrierthird" defaultValue={interriorthird} onChange={(e) => setinterrierthird(e.target.value)} />
                     </div>
                     <div>
-                        <label>Interrie Fourth</label>
-                        <input type="date" id="Date" name="Date" defaultValue={interrierfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
+                        <label>Interrier Fourth</label>
+                        <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
                 <button type='button' onClick={() => navigate(-1)}>Back</button>

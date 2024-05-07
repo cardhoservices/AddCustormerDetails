@@ -17,14 +17,15 @@ const getData = async (req, res) => {
     try {
         const data = await Subscription.find({});
         res.send(data)
+        // console.log(data)
     } catch (error) {
         console.log(error);
     }
 }
 
-const getdatabyid=async(req,res)=>{
+const getdatabyid = async (req, res) => {
     try {
-        const data=await Subscription.findById(req.params.id)
+        const data = await Subscription.findById(req.params.id)
         res.send(data)
     }
     catch (error) {
@@ -34,11 +35,10 @@ const getdatabyid=async(req,res)=>{
 
 const updateData = async (req, res) => {
     try {
-        console.log(req.body)
-        const data = await Subscription.findByIdAndUpdate(req.params.id, req.body);
-        res.send(data)
-    }
-    catch (error) {
+        console.log(req.params.id)
+        const data = await Subscription.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.send(data);
+    } catch (error) {
         console.log(error);
     }
 }
