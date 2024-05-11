@@ -116,6 +116,7 @@ input[type="text"][disabled]{
 .card{
   border: 1px solid black;
   width: 300px;
+  padding: 0 0 10px 10px;
 }
 .delUpdateButton {
   display: flex;
