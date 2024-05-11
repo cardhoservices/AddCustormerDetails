@@ -115,6 +115,9 @@ input[type="text"][disabled]{
 }
 .card{
   border: 1px solid black;
+  width: 300px;
+  display: flex;
+  gap: 10px;
 }
 
 .error{
