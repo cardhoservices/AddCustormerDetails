@@ -117,6 +117,10 @@ input[type="text"][disabled]{
   border: 1px solid black;
   width: 300px;
 }
+.delUpdateButton {
+  display: flex;
+  gap: 10px;
+}
 
 .error{
   font-weight: bolder;

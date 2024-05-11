@@ -56,7 +56,7 @@ function GetCustomerDetails() {
                                     <p>Second interrior date: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
                                     <p>Third interrior date: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
                                     <p>Fourth interrior date: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
-                                    <div>
+                                    <div className='delUpdateButton'>
                                         <button type="button" onClick={() => deleteData(item._id)}>Delete</button>
                                         <Link to={`/UpdateCustomerDetails/${item._id}`}><button type="button">Update</button></Link>
                                     </div>
