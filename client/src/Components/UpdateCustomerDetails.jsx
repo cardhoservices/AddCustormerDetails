@@ -34,7 +34,7 @@ function UpdateCustomerDetails() {
     }, [])
 
     const onSubmit = (data) => {
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Package, StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Package, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
             .then(res => {
                 console.log(res.data)
                 navigate("/CustomerDetails")
@@ -79,10 +79,8 @@ function UpdateCustomerDetails() {
                         <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
-                <div className="subDelButtons">
-                    <button type='button' onClick={() => navigate(-1)}>Back</button>
-                    <button type='submit' onClick={() => onSubmit()}>Submit</button>
-                </div>
+                <button type='button' onClick={() => navigate(-1)}>Back</button>
+                <button type='submit' onClick={() => onSubmit()}>Submit</button>
             </div>
         </div>
     );
