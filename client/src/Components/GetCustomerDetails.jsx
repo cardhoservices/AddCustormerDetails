@@ -39,13 +39,13 @@ function GetCustomerDetails() {
                         <Link to="/"><button>Home</button></Link>
                     </div>
                 </div>
-                <div>
+                <div className='_mainDivBox'>
                     {data.filter((item) => {
                         const phone = String(item.Phone);
                         return search === "" ? item : phone.toLowerCase().includes(search.toLowerCase());
                     }).map((item) => {
                         return (
-                            <div key={item._id} className='_mainDivBox'>
+                            <div key={item._id}>
                                 <div className='card'>
                                     <p>Name: {item.Name}</p>
                                     <p>Phone: {item.Phone}</p>
