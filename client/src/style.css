@@ -116,6 +116,7 @@ input[type="text"][disabled] {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-height: 50px;
 }
 
 ._mainDivBox {

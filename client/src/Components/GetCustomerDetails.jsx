@@ -34,7 +34,7 @@ function GetCustomerDetails() {
             <div>
                 <div className='heading'>
                     <input type="search" name="" className='searchbar' onChange={(e) => setSearch(e.target.value)} placeholder='Search By Phone Number' />
-                    <div>
+                    <div className='headerButtons'>
                         <Link to="/AddCustomerDetails"><button>Add Customer Details</button></Link>
                         <Link to="/"><button>Home</button></Link>
                     </div>
