@@ -117,6 +117,10 @@ input[type="text"][disabled]{
   border: 1px solid black;
   width: 300px;
 }
+.subDelButtons {
+  display: flex;
+  gap: 5px;
+}
 
 .error{
   font-weight: bolder;
