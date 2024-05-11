@@ -45,7 +45,7 @@ function GetCustomerDetails() {
                         return search === "" ? item : phone.toLowerCase().includes(search.toLowerCase());
                     }).map((item) => {
                         return (
-                            <div key={item._id}>
+                            <div key={item._id} className='_mainDivBox'>
                                 <div className='card'>
                                     <p>Name: {item.Name}</p>
                                     <p>Phone: {item.Phone}</p>
