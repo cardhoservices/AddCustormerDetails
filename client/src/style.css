@@ -120,7 +120,6 @@ input[type="text"][disabled] {
 }
 
 ._mainDivBox {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
