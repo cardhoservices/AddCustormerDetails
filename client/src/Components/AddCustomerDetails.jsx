@@ -20,7 +20,7 @@ function AddCustomerDetails() {
     return (
         <div className="container">
             <h1>Add Customer Details</h1>
-            <Link to="/"><button type="button">Home</button></Link>
+
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="Name" {...register("Name", { required: { value: true, message: "Name is required" } })} />
@@ -45,7 +45,7 @@ function AddCustomerDetails() {
                 <input type="text" id="car" name="Car" placeholder='eg:- Amaze' {...register("Car", { required: { value: true, message: "Car Name is required" } })} />
                 {errors.Car ? <p className='error'>{errors.Car.message}</p> : null}
 
-                
+
 
                 {errors.Package ? <p className='error'>{errors.Package.message}</p> : null}
                 <label htmlFor="Date">Start Date</label>
@@ -55,7 +55,7 @@ function AddCustomerDetails() {
                 <div className="interrior">
                     <div>
                         <label>1st</label>
-                        <input type="date" id='interrior' name='interrior' {...register("interriorfirst", { required: "Interrior cleaning date is required" })} />
+                        <input type="date" id='interrior' name='interrior' {...register("interriorfirst", { required: { value: true, message: "Interrior cleaning date is required" }})} />
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                     <div>
@@ -74,7 +74,10 @@ function AddCustomerDetails() {
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                 </div>
-                <button>Submit</button>
+                <div className='actionButtons'>
+                    <button>Submit</button>
+                    <Link to="/"><button type="button">Home</button></Link>
+                </div>
             </form>
         </div>
     );

@@ -25,7 +25,7 @@ function GetCustomerDetails() {
             //     )
             .catch(err => console.log(err))
     }
-    if (data===null) {
+    if (data === null) {
         <LoadingPage />
     }
     else {
@@ -34,19 +34,20 @@ function GetCustomerDetails() {
             <div>
                 <div className={css.heading}>
                     <input type="search" name="" className={css.searchbar} onChange={(e) => setSearch(e.target.value)} placeholder='Search By Phone Number' />
+
                     <div className={css.headerButtons}>
                         <Link to="/AddCustomerDetails"><button>Add Customer Details</button></Link>
                         <Link to="/"><button>Home</button></Link>
                     </div>
                 </div>
-                <div className='_mainDivBox'>
+                <div className={css._mainDivBox}>
                     {data.filter((item) => {
                         const phone = String(item.Phone);
                         return search === "" ? item : phone.toLowerCase().includes(search.toLowerCase());
                     }).map((item) => {
                         return (
                             <div key={item._id}>
-                                <div className='card'>
+                                <div className={css.card}>
                                     <p>Name: {item.Name}</p>
                                     <p>Phone: {item.Phone}</p>
                                     <p>Address: {item.Address}</p>
@@ -57,8 +58,8 @@ function GetCustomerDetails() {
                                     <p>Third interrior date: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
                                     <p>Fourth interrior date: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
                                     <div className='delUpdateButton'>
-                                        <button type="button" onClick={() => deleteData(item._id)}>Delete</button>
                                         <Link to={`/UpdateCustomerDetails/${item._id}`}><button type="button">Update</button></Link>
+                                        <button type="button" onClick={() => deleteData(item._id)}>Delete</button>
                                     </div>
                                 </div>
                             </div>
