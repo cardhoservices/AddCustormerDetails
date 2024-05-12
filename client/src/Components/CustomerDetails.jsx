@@ -50,7 +50,7 @@ function GetCustomerDetails() {
                                     <p>Name: {item.Name}</p>
                                     <p>Phone: {item.Phone}</p>
                                     <p>Address: {item.Address}</p>
-                                    <p>Package: {item.Package}</p>
+                                    <p>Car: {item.Car}</p>
                                     <p>Start Date: {item.StartDate ? item.StartDate.split("T")[0] : "N/A"}</p>
                                     <p>First interrier date: {item.interriorfirst ? item.interriorfirst.split("T")[0] : "N/A"}</p>
                                     <p>Second interrior date: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
