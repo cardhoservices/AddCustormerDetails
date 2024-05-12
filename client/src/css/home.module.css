@@ -37,9 +37,10 @@
 
 #warningSpan {
     background-color: rgba(255, 17, 17, 0.702);
-    padding: 10px;
+    padding: 0.5rem 1rem;
     color: white;
     border-radius: 70px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -56,4 +57,30 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+.addbutton {
+    background-color: transparent;
+    color: #33b249;
+    border: 2px solid #33b249;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.addbutton:hover{
+    background-color: #33b249;
+    color: white;
+}
+
+.detailsbutton {
+    background-color: transparent;
+    color: #0063ed;
+    border: 2px solid #0063ed;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.detailsbutton:hover{
+    background-color:#0063ed;
+    color: white;
 }

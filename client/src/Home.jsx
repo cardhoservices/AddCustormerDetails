@@ -13,8 +13,8 @@ function Home() {
           <p id={css.homeParas}>You can either ADD a customer or CHECK or UPDATE any detail of customer <br /> <br /> <span id={css.warningSpan}>BE CAREFULL WITH DATA</span></p>
 
           <div className={css.buttonDiv}>
-            <Link to={"/AddCustomerDetails"}><button className={css.addbutton}>Add customer</button></Link>
-            <Link to={"/CustomerDetails"}><button className={css.detailsbutton}>Details of customer</button></Link>
+            <Link to={"/AddCustomerDetails"}><button className={css.addbutton}>Add Customer</button></Link>
+            <Link to={"/CustomerDetails"}><button className={css.detailsbutton}>Detail of Customers</button></Link>
           </div>
 
         </div>
