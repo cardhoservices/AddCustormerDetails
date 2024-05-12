@@ -19,15 +19,16 @@ function UpdateCustomerDetails() {
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_SERVER_URL}/getdatabyid/${id}`)
             .then(res => {
+                console.log(res.data)
                 setName(res.data.Name)
                 setPhone(res.data.Phone)
                 setAddress(res.data.Address)
                 setCar(res.data.Car)
+                setDate(res.data.StartDate.split("T")[0])
                 setinterrierfirst(res.data.interriorfirst.split("T")[0])
                 setinterriersecond(res.data.interriorsecond.split("T")[0])
                 setinterrierthird(res.data.interriorthird.split("T")[0])
                 setinterrierfourth(res.data.interriorfourth.split("T")[0])
-                setDate(res.data.StartDate.split("T")[0])
                 // console.log(res.data)
             })
             .catch(err => console.log(err))
