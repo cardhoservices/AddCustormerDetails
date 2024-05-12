@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../style.css';
 import axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import css from '../css/updateCustomerDetails.module.css'
 
 function UpdateCustomerDetails() {
     const [Name, setName] = useState("")
@@ -56,7 +57,7 @@ function UpdateCustomerDetails() {
                 <input type="text" id="car" name="Car" defaultValue={Car} onChange={(e) => setCar(e.target.value)} />
                 <label htmlFor="Date">Start Date</label>
                 <input type="date" id="Date" name="Date" defaultValue={StartDate} onChange={(e) => setDate(e.target.value)} />
-                <div>
+                <div className={css.interiorContainer}>
                     <div>
                         <label>Interrier First</label>
                         <input type="date" id="Date" name="interrierfirst" defaultValue={interriorfirst} onChange={(e) => setinterrierfirst(e.target.value)} />
