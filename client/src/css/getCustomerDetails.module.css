@@ -149,7 +149,7 @@ input[type="text"][disabled] {
   border: 2px solid rgba(113, 112, 112, 0.457);
   border-radius: 5px;
   width: 300px;
-  padding: 0 0 10px 10px;
+  padding: 10px;
 }
 
 .delUpdateButton {

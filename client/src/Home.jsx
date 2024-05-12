@@ -1,11 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import css from './css/home.module.css'
 
 function Home() {
   return (
     <>
-    <Link to={"/AddCustomerDetails"}><button>Add customer</button></Link>
-    <Link to={"/CustomerDetails"}><button>Details of customer</button></Link>
+      <div className={css.container}>
+
+        <div className={css.mainbox}>
+
+          <h1 id={css.homeH1}>CARDHO<br /><span id={css.titleSpan}>BACKEND PORTAL</span></h1>
+          <p id={css.homeParas}>You can either ADD a customer or CHECK or UPDATE any detail of customer <br /> <br /> <span id={css.warningSpan}>BE CAREFULL WITH DATA</span></p>
+
+          <div className={css.buttonDiv}>
+            <Link to={"/AddCustomerDetails"}><button className={css.addbutton}>Add customer</button></Link>
+            <Link to={"/CustomerDetails"}><button className={css.detailsbutton}>Details of customer</button></Link>
+          </div>
+
+        </div>
+
+      </div>
     </>
   )
 }
