@@ -4,7 +4,7 @@ const SubscriptionSchema = new mongoose.Schema({
     Name: String,
     Phone: Number,
     Address: String,
-    Package: String,
+    Car: String,
     StartDate: Date,
     interriorfirst:Date,
     interriorsecond:Date,

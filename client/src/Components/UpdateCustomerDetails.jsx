@@ -7,7 +7,7 @@ function UpdateCustomerDetails() {
     const [Name, setName] = useState("")
     const [Phone, setPhone] = useState("")
     const [Address, setAddress] = useState("")
-    const [Package, setPackage] = useState("")
+    const [Car, setCar] = useState("")
     const [interriorfirst, setinterrierfirst] = useState("")
     const [interriorsecond, setinterriersecond] = useState("")
     const [interriorthird, setinterrierthird] = useState("")
@@ -22,7 +22,7 @@ function UpdateCustomerDetails() {
                 setName(res.data.Name)
                 setPhone(res.data.Phone)
                 setAddress(res.data.Address)
-                setPackage(res.data.Package)
+                setCar(res.data.Car)
                 setinterrierfirst(res.data.interriorfirst.split("T")[0])
                 setinterriersecond(res.data.interriorsecond.split("T")[0])
                 setinterrierthird(res.data.interriorthird.split("T")[0])
@@ -34,7 +34,7 @@ function UpdateCustomerDetails() {
     }, [])
 
     const onSubmit = (data) => {
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Package, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
             .then(res => {
                 console.log(res.data)
                 navigate("/CustomerDetails")
@@ -52,13 +52,9 @@ function UpdateCustomerDetails() {
                 <input type="text" id="phone" name="Phone" defaultValue={Phone} onChange={(e) => setPhone(e.target.value)} />
                 <label htmlFor="address">Address</label>
                 <input type="text" id="address" name="Address" defaultValue={Address} onChange={(e) => setAddress(e.target.value)} />
-                <label htmlFor="package">Package</label>
-                <select name="Package" id="" value={Package} onChange={(e) => setPackage(e.target.value)}>
-                    <option value="650 (Hatchback)" >650 (Hatchback)</option>
-                    <option value="700 (Sedan)">700 (Sedan)</option>
-                    <option value="750 (SUV)">750 (SUV)</option>
-                    <option value="850 (luxury)">850 (luxury)</option>
-                </select>
+                <label htmlFor="car">Car Name</label>
+                <input type="text" id="car" name="car" defaultValue={Car} onChange={(e) => car(e.target.value)} />
+                
                 <label htmlFor="Date">Start Date</label>
                 <input type="date" id="Date" name="Date" defaultValue={StartDate} onChange={(e) => setDate(e.target.value)} />
                 <div>
