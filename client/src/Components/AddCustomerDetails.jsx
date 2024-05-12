@@ -55,23 +55,23 @@ function AddCustomerDetails() {
                 <div className="interrior">
                     <div>
                         <label>1st</label>
-                        <input type="date" id='interrior' name='interrior' {...register("interriorfirst", { required: "Interrior cleaning date is required" })} />
-                        {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
+                        <input type="date" id='interrior' name='interrior' {...register("interriorfirst")} />
+                        {errors.interriorfirst ? <p className='error'>{errors.interriofirst.message}</p> : null}
                     </div>
                     <div>
                         <label>2nd</label>
                         <input type="date" id='interrior' name='interrior' {...register("interriorsecond")} />
-                        {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
+                        {errors.interriorsecond ? <p className='error'>{errors.interriorsecond.message}</p> : null}
                     </div>
                     <div>
                         <label>3rd</label>
                         <input type="date" id='interrior' name='interrior' {...register("interriorthird")} />
-                        {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
+                        {errors.interriorthird ? <p className='error'>{errors.interriorthird.message}</p> : null}
                     </div>
                     <div>
                         <label>4th</label>
                         <input type="date" id='interrior' name='interrior' {...register("interriorfourth")} />
-                        {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
+                        {errors.interriorfourth ? <p className='error'>{errors.interriorfourth.message}</p> : null}
                     </div>
                 </div>
                 <button>Submit</button>
