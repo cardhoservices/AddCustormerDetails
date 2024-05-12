@@ -41,14 +41,11 @@ function AddCustomerDetails() {
                 <label htmlFor="address">Address</label>
                 <input type="text" id="address" name="Address" {...register("Address", { required: { value: true, message: "Address is required" } })} />
                 {errors.Address ? <p className='error'>{errors.Address.message}</p> : null}
-                <label htmlFor="package">Package</label>
-                <select name="Package" id="Package" {...register("Package", { required: "Package is required" })}>
-                    <option value="">Select a package</option>
-                    <option value="650 (Hatchback)">650 (Hatchback)</option>
-                    <option value="700 (Sedan)">700 (Sedan)</option>
-                    <option value="750 (SUV)">750 (SUV)</option>
-                    <option value="850 (luxury)">850 (luxury)</option>
-                </select>
+                <label htmlFor="car">Car Name</label>
+                <input type="text" id="car" name="Car" placeholder='eg:- Amaze' {...register("Car", { required: { value: true, message: "Car Name is required" } })} />
+                {errors.Car ? <p className='error'>{errors.Car.message}</p> : null}
+
+                
 
                 {errors.Package ? <p className='error'>{errors.Package.message}</p> : null}
                 <label htmlFor="Date">Start Date</label>
@@ -63,17 +60,17 @@ function AddCustomerDetails() {
                     </div>
                     <div>
                         <label>2nd</label>
-                        <input type="date" id='interrior' name='interrior' {...register("interriorsecond", { required: "Interrior cleaning date is required" })} />
+                        <input type="date" id='interrior' name='interrior' {...register("interriorsecond")} />
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                     <div>
                         <label>3rd</label>
-                        <input type="date" id='interrior' name='interrior' {...register("interriorthird", { required: "Interrior cleaning date is required" })} />
+                        <input type="date" id='interrior' name='interrior' {...register("interriorthird")} />
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                     <div>
                         <label>4th</label>
-                        <input type="date" id='interrior' name='interrior' {...register("interriorfourth", { required: "Interrior cleaning date is required" })} />
+                        <input type="date" id='interrior' name='interrior' {...register("interriorfourth")} />
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                 </div>
