@@ -35,7 +35,7 @@ function UpdateCustomerDetails() {
     }, [])
 
     const onSubmit = (data) => {
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth })
             .then(res => {
                 console.log(res.data)
                 navigate("/CustomerDetails")
@@ -45,7 +45,7 @@ function UpdateCustomerDetails() {
     return (
         <div className="container">
             <h1>Update Customer Details</h1>
-            <Link to="/"><button type="button">Home</button></Link>
+
             <div>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="Name" defaultValue={Name} onChange={(e) => setName(e.target.value)} />
@@ -75,8 +75,11 @@ function UpdateCustomerDetails() {
                         <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
-                <button type='button' onClick={() => navigate(-1)}>Back</button>
-                <button type='submit' onClick={() => onSubmit()}>Submit</button>
+                <div className="updateCustomerPageButtons">
+                    <Link to="/"><button type="button">Home</button></Link>
+                    <button type='submit' onClick={() => onSubmit()}>Submit</button>
+                    <button type='button' onClick={() => navigate(-1)}>Back</button>
+                </div>
             </div>
         </div>
     );

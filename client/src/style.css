@@ -116,6 +116,7 @@ input[type="text"][disabled] {
 
 
 /* Add Customer Details */
+
 .actionButtons {
   margin: auto;
   width: 50%;
@@ -123,6 +124,15 @@ input[type="text"][disabled] {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/* Update Customer Details */
+
+.updateCustomerPageButtons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* Customers Details */
