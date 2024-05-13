@@ -59,19 +59,19 @@ function UpdateCustomerDetails() {
                 <input type="date" id="Date" name="Date" defaultValue={StartDate} onChange={(e) => setDate(e.target.value)} />
                 <div className={css.interiorContainer}>
                     <div>
-                        <label>Interrier First</label>
+                        <label>Interior First</label>
                         <input type="date" id="Date" name="interrierfirst" defaultValue={interriorfirst} onChange={(e) => setinterrierfirst(e.target.value)} />
                     </div>
                     <div>
-                        <label>Interrier Second</label>
+                        <label>Interior Second</label>
                         <input type="date" id="Date" name="interriersecond" defaultValue={interriorsecond} onChange={(e) => setinterriersecond(e.target.value)} />
                     </div>
                     <div>
-                        <label>Interrier Third</label>
+                        <label>Interior Third</label>
                         <input type="date" id="Date" name="interrierthird" defaultValue={interriorthird} onChange={(e) => setinterrierthird(e.target.value)} />
                     </div>
                     <div>
-                        <label>Interrier Fourth</label>
+                        <label>Interior Fourth</label>
                         <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
