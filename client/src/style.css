@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -6,8 +12,8 @@ body {
 }
 
 .container {
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 600px;
+  margin: 15px auto;
   padding: 20px;
   background-color: #002c40;
   border-radius: 10px;
@@ -37,6 +43,7 @@ input[type="number"],
 input[type="date"],
 select {
   width: calc(100% - 20px);
+  height: 2.1rem;
   /* Subtract padding from width */
   padding: 10px;
   margin-bottom: 10px;
@@ -108,15 +115,24 @@ input[type="text"][disabled] {
 }
 
 
+/* Add Customer Details */
 
-
-
-
-.heading {
-  height: 2rem;
+.actionButtons {
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/* Update Customer Details */
+
+.updateCustomerPageButtons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 ._mainDivBox {

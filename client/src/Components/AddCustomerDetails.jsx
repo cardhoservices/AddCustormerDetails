@@ -23,10 +23,10 @@ function AddCustomerDetails() {
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="Name" {...register("Name", { required: { value: true, message: "Name is required" } })} />
+                <input type="text" id="name" name="Name" placeholder='Full Name' {...register("Name", { required: { value: true, message: "Name is required" } })} />
                 {errors.Name ? <p className='error'>{errors.Name.message}</p> : null}
                 <label htmlFor="phone">Phone</label>
-                <input type="text" id="phone" name="Phone" {...register("Phone", {
+                <input type="text" id="phone" name="Phone" placeholder='Do NOT include country code' {...register("Phone", {
                     required: "Phone number is required",
                     minLength: {
                         value: 10,
@@ -39,7 +39,7 @@ function AddCustomerDetails() {
                 })} />
                 {errors.Phone ? <p className='error'>{errors.Phone.message}</p> : null}
                 <label htmlFor="address">Address</label>
-                <input type="text" id="address" name="Address" {...register("Address", { required: { value: true, message: "Address is required" } })} />
+                <input type="text" id="address" name="Address" placeholder='Area / Locality / Full Address' {...register("Address", { required: { value: true, message: "Address is required" } })} />
                 {errors.Address ? <p className='error'>{errors.Address.message}</p> : null}
                 <label htmlFor="car">Car Name</label>
                 <input type="text" id="car" name="Car" placeholder='eg:- Amaze' {...register("Car", { required: { value: true, message: "Car Name is required" } })} />
@@ -51,7 +51,7 @@ function AddCustomerDetails() {
                 <label htmlFor="Date">Start Date</label>
                 <input type="date" id="date" name="StartDate" {...register("StartDate", { required: { value: true, message: "Start Date is required" } })} />
                 {errors.StartDate ? <p className='error'>{errors.StartDate.message}</p> : null}
-                <label>Interrier Cleaning</label>
+                <label>Interior Cleaning Dates</label>
                 <div className="interrior">
                     <div>
                         <label>1st</label>
