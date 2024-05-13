@@ -20,11 +20,11 @@ function GetCustomerDetails() {
     const deleteData = async (id) => {
         await alert("Are you sure?")
         axios.delete(`${import.meta.env.VITE_SERVER_URL}/delete/${id}`)
+        window.location.reload(true)
         // .then(() =>
             //     window.location.reload()
         //     )
         .catch(err => console.log(err))
-        window.location.reload();
     }
     if (data === null) {
         <LoadingPage />
