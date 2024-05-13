@@ -150,7 +150,7 @@ input[type="text"][disabled] {
 .card {
   border: 2px solid rgba(113, 112, 112, 0.457);
   border-radius: 5px;
-  width: 250px;
+  width: 280px;
   padding: 10px;
 }
 
