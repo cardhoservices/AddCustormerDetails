@@ -113,12 +113,14 @@ input[type="text"][disabled] {
 /* Customer Details */
 
 .heading {
+  width: 100vw;
   height: 5rem;
   background-color: #ffffffb4;
   box-shadow: 10px 0px 10px rgba(128, 128, 128, 0.514);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex: 1;
 }
 
 .searchbar {
@@ -138,13 +140,47 @@ input[type="text"][disabled] {
   margin-right: -100px;
 }
 
+.addCustomerDetailButton {
+  height: 2.5rem;
+  width: 170px;
+}
+.goToHomeButton {
+  height: 2.5rem;
+}
+
+@media (max-width:769px){
+  .heading {
+    width: 100svw;
+    justify-content: space-around;
+    padding: 0 50px;
+  }
+  .searchbar {
+    width: 100px;
+    margin-left: -50px;
+  }
+  .headerButtons{
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: -70px;
+  }
+  .addCustomerDetailButton {
+    height: 2.5rem;
+    width: 5rem;
+    padding: 5px;
+  }
+}
+
 ._mainDivBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 10px;
-  margin-top: 20px;
-  padding: 0.75rem;
+  margin: 0 auto;
+  max-width: 1280px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .card {
