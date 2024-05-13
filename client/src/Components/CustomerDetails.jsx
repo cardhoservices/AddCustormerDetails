@@ -19,7 +19,7 @@ function GetCustomerDetails() {
 
     const deleteData = async (id) => {
         await alert("Are you sure?")
-        window.reload()
+        location.reload()
         axios.delete(`${import.meta.env.VITE_SERVER_URL}/delete/${id}`)
             // .then(() =>
             //     window.location.reload()
