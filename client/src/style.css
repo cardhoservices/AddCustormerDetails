@@ -135,14 +135,6 @@ input[type="text"][disabled] {
   justify-content: space-around;
 }
 
-/* Customers Details */
-.heading {
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 ._mainDivBox {
   display: flex;
   flex-wrap: wrap;

@@ -113,8 +113,9 @@ input[type="text"][disabled] {
 
 
 .heading {
-  height: 4rem;
-  background-color: rgb(222, 222, 222);
+  height: 5rem;
+  background-color: #ffffffb4;
+  box-shadow: 10px 0px 10px rgba(128, 128, 128, 0.514);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -127,6 +128,7 @@ input[type="text"][disabled] {
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
+  background-color: rgba(128, 128, 128, 0.201);
 }
 
 .headerButtons{
