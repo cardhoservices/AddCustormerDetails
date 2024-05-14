@@ -13,7 +13,7 @@ function UpdateCustomerDetails() {
     const [interriorsecond, setinterriersecond] = useState("")
     const [interriorthird, setinterrierthird] = useState("")
     const [interriorfourth, setinterrierfourth] = useState("")
-    const [StartDate, setDate] = useState([])
+    const [StartDate, setDate] = useState("")
     const navigate = useNavigate()
     const id = useParams().id
 
@@ -35,22 +35,23 @@ function UpdateCustomerDetails() {
     }, [])
 
     const onSubmit = (data) => {
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
             .then(res => {
+                console.log(StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth)
                 console.log(res.data)
-                navigate("/CustomerDetails")
+                // navigate("/CustomerDetails")
             })
             .catch(err => console.log(err))
     }
     return (
         <div className="container">
             <h1>Update Customer Details</h1>
-
+            <Link to="/"><button type="button">Home</button></Link>
             <div>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="Name" defaultValue={Name} onChange={(e) => setName(e.target.value)} />
                 <label htmlFor="phone">Phone</label>
-                <input type="text" id="phone" name="Phone" defaultValue={Phone} onChange={(e) => setPhone(e.target.value)} />
+                <input type="text" id="phone" name="Phone" defaultValue={Phone}  onChange={(e) => setPhone(e.target.value)} />
                 <label htmlFor="address">Address</label>
                 <input type="text" id="address" name="Address" defaultValue={Address} onChange={(e) => setAddress(e.target.value)} />
                 <label htmlFor="car">Car Name</label>
@@ -75,11 +76,8 @@ function UpdateCustomerDetails() {
                         <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
-                <div className="updateCustomerPageButtons">
-                    <Link to="/"><button type="button">Home</button></Link>
-                    <button type='submit' onClick={() => onSubmit()}>Submit</button>
-                    <button type='button' onClick={() => navigate(-1)}>Back</button>
-                </div>
+                <button type='button' onClick={() => navigate(-1)}>Back</button>
+                <button type='submit' onClick={() => onSubmit()}>Submit</button>
             </div>
         </div>
     );

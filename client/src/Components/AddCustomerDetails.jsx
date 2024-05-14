@@ -55,7 +55,7 @@ function AddCustomerDetails() {
                 <div className="interrior">
                     <div>
                         <label>1st</label>
-                        <input type="date" id='interrior' name='interrior' {...register("interriorfirst", { required: { value: true, message: "Interrior cleaning date is required" }})} />
+                        <input type="date" id='interrior' name='interrior' {...register("interriorfirst")} />
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                     <div>

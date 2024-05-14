@@ -37,6 +37,7 @@ const updateData = async (req, res) => {
     try {
         // console.log(req.params.id)
         const data = await Subscription.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        // console.log(res.body)
         res.send(data);
     } catch (error) {
         console.log(error);
