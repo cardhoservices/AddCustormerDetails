@@ -39,7 +39,7 @@ function UpdateCustomerDetails() {
             .then(res => {
                 console.log(StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth)
                 console.log(res.data)
-                // navigate("/CustomerDetails")
+                navigate("/CustomerDetails")
             })
             .catch(err => console.log(err))
     }
