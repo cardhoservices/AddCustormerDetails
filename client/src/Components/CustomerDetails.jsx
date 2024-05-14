@@ -36,8 +36,8 @@ function GetCustomerDetails() {
                     <input type="search" name="" className={css.searchbar} onChange={(e) => setSearch(e.target.value)} placeholder='Search By Phone Number' />
 
                     <div className={css.headerButtons}>
-                        <Link to="/AddCustomerDetails"><button>Add Customer Details</button></Link>
-                        <Link to="/"><button>Home</button></Link>
+                        <Link to="/AddCustomerDetails"><button className={css.addCustomerDetailButton}>Add Customer</button></Link>
+                        <Link to="/"><button className={css.goToHomeButton}>Home</button></Link>
                     </div>
                 </div>
                 <div className={css._mainDivBox}>
@@ -53,10 +53,10 @@ function GetCustomerDetails() {
                                     <p>Address: {item.Address}</p>
                                     <p>Car: {item.Car}</p>
                                     <p>Start Date: {item.StartDate ? item.StartDate.split("T")[0] : "N/A"}</p>
-                                    <p>First interrier date: {item.interriorfirst ? item.interriorfirst.split("T")[0] : "N/A"}</p>
-                                    <p>Second interrior date: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
-                                    <p>Third interrior date: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
-                                    <p>Fourth interrior date: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
+                                    <p>1<sup>st</sup> interior date: {item.interriorfirst ? item.interriorfirst.split("T")[0] : "N/A"}</p>
+                                    <p>2<sup>nd</sup> interior date: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
+                                    <p>3<sup>rd</sup> interior date: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
+                                    <p>4<sup>th</sup> interior date: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
                                     <div className='delUpdateButton'>
                                         <Link to={`/UpdateCustomerDetails/${item._id}`}><button type="button">Update</button></Link>
                                         <button type="button" onClick={() => deleteData(item._id)}>Delete</button>
