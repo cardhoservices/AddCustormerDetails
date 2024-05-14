@@ -10,7 +10,7 @@ const SubscriptionSchema = new mongoose.Schema({
     interriorsecond:Date,
     interriorthird:Date,
     interriorfourth:Date,
-
+    PressureWash: Date
 })
 
 const Subscription = mongoose.model('details', SubscriptionSchema);

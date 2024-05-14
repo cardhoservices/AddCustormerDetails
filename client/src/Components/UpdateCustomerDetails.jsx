@@ -13,6 +13,7 @@ function UpdateCustomerDetails() {
     const [interriorsecond, setinterriersecond] = useState("")
     const [interriorthird, setinterrierthird] = useState("")
     const [interriorfourth, setinterrierfourth] = useState("")
+    const [PressureWash, setpressureWash] = useState("")
     const [StartDate, setDate] = useState("")
     const navigate = useNavigate()
     const id = useParams().id
@@ -20,26 +21,27 @@ function UpdateCustomerDetails() {
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_SERVER_URL}/getdatabyid/${id}`)
             .then(res => {
+
                 setName(res.data.Name)
                 setPhone(res.data.Phone)
                 setAddress(res.data.Address)
                 setCar(res.data.Car)
-                setDate(res.data.StartDate.split("T")[0])
-                setinterrierfirst(res.data.interriorfirst.split("T")[0])
-                setinterriersecond(res.data.interriorsecond.split("T")[0])
-                setinterrierthird(res.data.interriorthird.split("T")[0])
-                setinterrierfourth(res.data.interriorfourth.split("T")[0])
-                // console.log(res.data)
+                setDate(res.data.StartDate ? res.data.StartDate.split("T")[0] : "");
+                setinterrierfirst(res.data.interriorfirst ? res.data.interriorfirst.split("T")[0] : "");
+                setinterriersecond(res.data.interriorsecond ? res.data.interriorsecond.split("T")[0] : "");
+                setinterrierthird(res.data.interriorthird ? res.data.interriorthird.split("T")[0] : "");
+                setinterrierfourth(res.data.interriorfourth ? res.data.interriorfourth.split("T")[0] : "");
+                setpressureWash(res.data.PressureWash ? res.data.PressureWash.split("T")[0] : "");
             })
             .catch(err => console.log(err))
     }, [])
 
     const onSubmit = (data) => {
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth, PressureWash })
             .then(res => {
-                console.log(StartDate,interriorfirst,interriorsecond,interriorthird,interriorfourth)
-                console.log(res.data)
-                navigate("/CustomerDetails")
+                console.log(StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth)
+                // console.log(res.data)
+                // navigate("/CustomerDetails")
             })
             .catch(err => console.log(err))
     }
@@ -51,7 +53,7 @@ function UpdateCustomerDetails() {
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="Name" defaultValue={Name} onChange={(e) => setName(e.target.value)} />
                 <label htmlFor="phone">Phone</label>
-                <input type="text" id="phone" name="Phone" defaultValue={Phone}  onChange={(e) => setPhone(e.target.value)} />
+                <input type="text" id="phone" name="Phone" defaultValue={Phone} onChange={(e) => setPhone(e.target.value)} />
                 <label htmlFor="address">Address</label>
                 <input type="text" id="address" name="Address" defaultValue={Address} onChange={(e) => setAddress(e.target.value)} />
                 <label htmlFor="car">Car Name</label>
@@ -76,6 +78,8 @@ function UpdateCustomerDetails() {
                         <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
+                <label>Pressure Wash</label>
+                <input type="date" id="Date" name="PressureWash" defaultValue={PressureWash} onChange={(e) => setpressureWash(e.target.value)} />
                 <button type='button' onClick={() => navigate(-1)}>Back</button>
                 <button type='submit' onClick={() => onSubmit()}>Submit</button>
             </div>

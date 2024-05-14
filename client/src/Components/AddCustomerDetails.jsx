@@ -9,7 +9,7 @@ function AddCustomerDetails() {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
     const onSubmit = (data) => {
-        // console.log(data)
+        console.log(data)
         axios.post(`${import.meta.env.VITE_SERVER_URL}/post`, data)
             .then(res => {
                 // console.log(res.data)
@@ -74,6 +74,9 @@ function AddCustomerDetails() {
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                 </div>
+                <label>Pressure Wash Date</label>
+                <input type="date" id="pressureWash" name="pressureWash" {...register("PressureWash", { required: { value: true, message: "Pressure Wash date is required" } })} />
+                {errors.Car ? <p className='error'>{errors.PressureWash.message}</p> : null}
                 <div className='actionButtons'>
                     <button>Submit</button>
                     <Link to="/"><button type="button">Home</button></Link>
