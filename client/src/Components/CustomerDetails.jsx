@@ -55,10 +55,10 @@ function GetCustomerDetails() {
                                     <p>Address: {item.Address}</p>
                                     <p>Car: {item.Car}</p>
                                     <p>Start Date: {item.StartDate ? item.StartDate.split("T")[0] : "N/A"}</p>
-                                    <p>1<sup>st</sup> interior date: {item.interriorfirst ? item.interriorfirst.split("T")[0] : "N/A"}</p>
-                                    <p>2<sup>nd</sup> interior date: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
-                                    <p>3<sup>rd</sup> interior date: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
-                                    <p>4<sup>th</sup> interior date: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
+                                    <p>1<sup>st</sup> interior: {item.interriorfirst ? item.interriorfirst.split("T")[0] : "N/A"}</p>
+                                    <p>2<sup>nd</sup> interior: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
+                                    <p>3<sup>rd</sup> interior: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
+                                    <p>4<sup>th</sup> interior: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
                                     <p>Pressure Wash Date: {item.PressureWash ? item.PressureWash.split("T")[0] : "N/A"}</p>
                                     <div className={css.delUpdateButton}>
                                         <Link to={`/UpdateCustomerDetails/${item._id}`}><button type="button">Update</button></Link>
