@@ -139,7 +139,7 @@ input[type="text"][disabled] {
   background-color: rgba(128, 128, 128, 0.201);
 }
 
-.headerButtons{
+.headerButtons {
   width: 20%;
   display: flex;
   justify-content: space-between;
@@ -150,6 +150,7 @@ input[type="text"][disabled] {
   height: 2.5rem;
   width: 170px;
 }
+
 .goToHomeButton {
   height: 2.5rem;
 }
@@ -177,28 +178,32 @@ input[type="text"][disabled] {
   gap: 10px;
 }
 
-@media (max-width:769px){
+@media (max-width:769px) {
   .heading {
     width: 100svw;
     justify-content: space-around;
     padding: 0 50px;
   }
+
   .searchbar {
     width: 100px;
     margin-left: -50px;
   }
-  .headerButtons{
+
+  .headerButtons {
     width: 180px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-right: -70px;
   }
+
   .addCustomerDetailButton {
     height: 2.5rem;
     width: 5rem;
     padding: 5px;
   }
+
   .delUpdateButton {
     display: flex;
     justify-content: center;
