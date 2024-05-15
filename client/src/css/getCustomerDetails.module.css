@@ -47,7 +47,7 @@ select {
   width: calc(100% - 20px);
   /* Subtract padding from width */
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
@@ -100,7 +100,7 @@ input[type="text"][disabled] {
 
   input[type="date"],
   select {
-    width: 100%;
+    width: calc(100% - 20px);
   }
 
   input[type="number"],
@@ -145,6 +145,7 @@ input[type="text"][disabled] {
   justify-content: space-between;
   margin-right: -100px;
 }
+
 
 .addCustomerDetailButton {
   height: 2.5rem;

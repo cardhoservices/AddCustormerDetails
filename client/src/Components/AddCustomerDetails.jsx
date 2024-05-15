@@ -19,7 +19,7 @@ function AddCustomerDetails() {
     }
     return (
         <div className="container">
-            <h1>Add Customer Details</h1>
+            <h1 className='addCustomerDetailHeading'>Add Customer Details</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="name">Name</label>

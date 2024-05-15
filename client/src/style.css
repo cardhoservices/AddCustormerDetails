@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -117,6 +117,10 @@ input[type="text"][disabled] {
 
 /* Add Customer Details */
 
+.addCustomerDetailHeading {
+  margin-bottom: 20px;
+}
+
 .actionButtons {
   margin: auto;
   width: 50%;
@@ -124,6 +128,10 @@ input[type="text"][disabled] {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    gap: 10px;
+  }
 }
 
 /* Update Customer Details */
@@ -191,4 +199,8 @@ input[type="text"][disabled] {
 .interrior {
   display: flex;
   flex-direction: row;
+  
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }
