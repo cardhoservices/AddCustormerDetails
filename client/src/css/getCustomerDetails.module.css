@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -43,7 +51,6 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
 button {
@@ -66,7 +73,6 @@ button:hover {
   background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Open Sans', sans-serif;
 }
 
 p {
@@ -133,7 +139,7 @@ input[type="text"][disabled] {
   background-color: rgba(128, 128, 128, 0.201);
 }
 
-.headerButtons{
+.headerButtons {
   width: 20%;
   display: flex;
   justify-content: space-between;
@@ -144,32 +150,9 @@ input[type="text"][disabled] {
   height: 2.5rem;
   width: 170px;
 }
+
 .goToHomeButton {
   height: 2.5rem;
-}
-
-@media (max-width:769px){
-  .heading {
-    width: 100svw;
-    justify-content: space-around;
-    padding: 0 50px;
-  }
-  .searchbar {
-    width: 100px;
-    margin-left: -50px;
-  }
-  .headerButtons{
-    width: 180px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-right: -70px;
-  }
-  .addCustomerDetailButton {
-    height: 2.5rem;
-    width: 5rem;
-    padding: 5px;
-  }
 }
 
 ._mainDivBox {
@@ -186,13 +169,47 @@ input[type="text"][disabled] {
 .card {
   border: 2px solid rgba(113, 112, 112, 0.457);
   border-radius: 5px;
-  width: 280px;
+  width: 300px;
   padding: 10px;
 }
 
 .delUpdateButton {
   display: flex;
   gap: 10px;
+}
+
+@media (max-width:769px) {
+  .heading {
+    width: 100svw;
+    justify-content: space-around;
+    padding: 0 50px;
+  }
+
+  .searchbar {
+    width: 100px;
+    margin-left: -50px;
+  }
+
+  .headerButtons {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: -70px;
+  }
+
+  .addCustomerDetailButton {
+    height: 2.5rem;
+    width: 5rem;
+    padding: 5px;
+  }
+
+  .delUpdateButton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .error {
