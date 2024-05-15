@@ -4,10 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -51,7 +51,6 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
 button {
@@ -74,7 +73,6 @@ button:hover {
   background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Open Sans', sans-serif;
 }
 
 p {
@@ -156,6 +154,29 @@ input[type="text"][disabled] {
   height: 2.5rem;
 }
 
+._mainDivBox {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 2px solid rgba(113, 112, 112, 0.457);
+  border-radius: 5px;
+  width: 300px;
+  padding: 10px;
+}
+
+.delUpdateButton {
+  display: flex;
+  gap: 10px;
+}
+
 @media (max-width:769px){
   .heading {
     width: 100svw;
@@ -178,29 +199,12 @@ input[type="text"][disabled] {
     width: 5rem;
     padding: 5px;
   }
-}
-
-._mainDivBox {
-  margin: 0 auto;
-  max-width: 1280px;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.card {
-  border: 2px solid rgba(113, 112, 112, 0.457);
-  border-radius: 5px;
-  width: 300px;
-  padding: 10px;
-}
-
-.delUpdateButton {
-  display: flex;
-  gap: 10px;
+  .delUpdateButton {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .error {
