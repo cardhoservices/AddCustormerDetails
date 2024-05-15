@@ -226,19 +226,6 @@ input[type="text"][disabled] {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-}
-
-.loading video {
-  width: 300px;
-}
-
-.loading video::-webkit-media-controls {
-  display: none;
-}
-
-.loading video:hover::-webkit-media-controls {
-  display: none;
 }
 
 .interrior {
