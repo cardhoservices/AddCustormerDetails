@@ -143,12 +143,10 @@ input[type="text"][disabled] {
 }
 
 ._mainDivBox {
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 10px; */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  gap: 10px;
   margin-top: 20px;
   padding: 0.75rem;
 }
