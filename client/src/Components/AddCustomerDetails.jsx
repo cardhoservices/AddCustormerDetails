@@ -74,9 +74,6 @@ function AddCustomerDetails() {
                         {errors.interrior ? <p className='error'>{errors.interrior.message}</p> : null}
                     </div>
                 </div>
-                <label>Pressure Wash Date</label>
-                <input type="date" id="pressureWash" name="pressureWash" {...register("PressureWash", { required: { value: true, message: "Pressure Wash date is required" } })} />
-                {errors.Car ? <p className='error'>{errors.PressureWash.message}</p> : null}
                 <div className='actionButtons'>
                     <button>Submit</button>
                     <Link to="/"><button type="button">Home</button></Link>

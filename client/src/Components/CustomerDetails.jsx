@@ -60,7 +60,6 @@ function GetCustomerDetails() {
                                             <p>2<sup>nd</sup> interior: {item.interriorsecond ? item.interriorsecond.split("T")[0] : "N/A"}</p>
                                             <p>3<sup>rd</sup> interior: {item.interriorthird ? item.interriorthird.split("T")[0] : "N/A"}</p>
                                             <p>4<sup>th</sup> interior: {item.interriorfourth ? item.interriorfourth.split("T")[0] : "N/A"}</p>
-                                            <p>Pressure Wash Date: {item.PressureWash ? item.PressureWash.split("T")[0] : "N/A"}</p>
                                             <div className={css.delUpdateButton}>
                                                 <Link to={`/UpdateCustomerDetails/${item._id}`}><button type="button">Update</button></Link>
                                                 <button type="button" onClick={() => deleteData(item._id)}>Delete</button>

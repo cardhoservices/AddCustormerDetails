@@ -13,7 +13,6 @@ function UpdateCustomerDetails() {
     const [interriorsecond, setinterriersecond] = useState("")
     const [interriorthird, setinterrierthird] = useState("")
     const [interriorfourth, setinterrierfourth] = useState("")
-    const [PressureWash, setpressureWash] = useState("")
     const [StartDate, setDate] = useState("")
     const navigate = useNavigate()
     const id = useParams().id
@@ -31,13 +30,12 @@ function UpdateCustomerDetails() {
                 setinterriersecond(res.data.interriorsecond ? res.data.interriorsecond.split("T")[0] : "");
                 setinterrierthird(res.data.interriorthird ? res.data.interriorthird.split("T")[0] : "");
                 setinterrierfourth(res.data.interriorfourth ? res.data.interriorfourth.split("T")[0] : "");
-                setpressureWash(res.data.PressureWash ? res.data.PressureWash.split("T")[0] : "");
             })
             .catch(err => console.log(err))
     }, [])
 
     const onSubmit = (data) => {
-        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth, PressureWash })
+        axios.put(`${import.meta.env.VITE_SERVER_URL}/update/${id}`, { Name, Phone, Address, Car, StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth })
             .then(res => {
                 console.log(StartDate, interriorfirst, interriorsecond, interriorthird, interriorfourth)
                 // console.log(res.data)
@@ -78,8 +76,6 @@ function UpdateCustomerDetails() {
                         <input type="date" id="Date" name="interrierfourth" defaultValue={interriorfourth} onChange={(e) => setinterrierfourth(e.target.value)} />
                     </div>
                 </div>
-                <label>Pressure Wash</label>
-                <input type="date" id="Date" name="PressureWash" defaultValue={PressureWash} onChange={(e) => setpressureWash(e.target.value)} />
                 <button type='button' onClick={() => navigate(-1)}>Back</button>
                 <button type='submit' onClick={() => onSubmit()}>Submit</button>
             </div>
